@@ -2,12 +2,12 @@ package de.jwiegratz.unique_numbers;
 import java.util.ArrayList;
 import java.util.HashSet;
 
-public class UniqueNumbersNoCache {
+public class Singularity {
 
 	private int base;
 	private ArrayList<String> numbers;
 	
-	public UniqueNumbersNoCache(int base){
+	public Singularity(int base){
 		this.base = base;
 		this.numbers = new ArrayList<String>();
 	}
@@ -29,7 +29,7 @@ public class UniqueNumbersNoCache {
 			if(this.filterCombo(progress) == true){
 				this.numbers.add(progress);
 			}
-		} else if (depth <= base) {
+		} else if (depth < base) {
 			for (int i = 1; i <= base; i++) {
 				//Rekursiver Aufruf, Anzahl so groß wie die Basis (Basis 3 => 3 rek. Aufrufe)
 				base_count(base, depth + 1, progress.concat(new Integer(i).toString() + " "));
@@ -69,8 +69,8 @@ public class UniqueNumbersNoCache {
 		    }
 		}
 
-		UniqueNumbersNoCache unnc = new UniqueNumbersNoCache(base);
-		for(String num : unnc.calculate()){
+		Singularity sing = new Singularity(base);
+		for(String num : sing.calculate()){
 			System.out.println(num);
 		}
 	}
