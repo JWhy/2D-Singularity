@@ -7,6 +7,8 @@ public class QueenSingularity {
 	private int base;
 	private ArrayList<String> numbers;
 	
+	private String lim = " ";
+	
 	public QueenSingularity(int base){
 		this.base = base;
 		this.numbers = new ArrayList<String>();
@@ -32,7 +34,7 @@ public class QueenSingularity {
 		} else if (depth < base) {
 			for (int i = 1; i <= base; i++) {
 				//Rekursiver Aufruf, Anzahl so groß wie die Basis (Basis 3 => 3 rek. Aufrufe)
-				base_count(base, depth + 1, progress.concat(new Integer(i).toString() + " "));
+				base_count(base, depth + 1, progress.concat(new Integer(i).toString() + lim));
 			}
 		}
 	}
@@ -42,7 +44,7 @@ public class QueenSingularity {
 		HashSet<String> unicache = new HashSet<String>();
 		
 		//Zerlege Zahl in "Ziffern"
-		String[] tnt = progress.split(" ");
+		String[] tnt = progress.split(lim);
 		
 		for(int i=0; i<tnt.length; i++){
 			String t = tnt[i];
@@ -89,7 +91,7 @@ public class QueenSingularity {
 		String[] result = sing.calculate();
 		
 		for(String num : result) System.out.println(num);
-		System.out.println("Finished: " + result.length + " Results");
+		//System.out.println("Finished: " + result.length + " Results");
 	}
 	
 }

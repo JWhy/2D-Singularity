@@ -1,7 +1,6 @@
 package de.jwiegratz.unique_numbers;
 import java.util.HashSet;
 
-
 public class UniqueNumbers {
 	
 	public String[] getUniqueNumbers(int base){
@@ -29,7 +28,7 @@ public class UniqueNumbers {
 		HashSet<String> unicache = new HashSet<String>();
 		
 		//Zerlege Zahl in "Ziffern"
-		String[] tnt = number.split(" ");
+		String[] tnt = number.split(CustomNumberSystem.lim);
 		
 		for(String t : tnt){
 			//Prüfe, ob Ziffer schon vorgekommen ist

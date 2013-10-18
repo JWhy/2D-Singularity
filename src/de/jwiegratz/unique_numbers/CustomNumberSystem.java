@@ -7,6 +7,8 @@ public class CustomNumberSystem {
 
 	private ArrayList<String> numbers;
 	private int base;
+	
+	public static final String lim = " ";
 
 	Timer timer = new Timer();
 
@@ -46,7 +48,7 @@ public class CustomNumberSystem {
 		} else if (depth <= base) {
 			for (int i = 1; i <= base; i++) {
 				//Rekursiver Aufruf, Anzahl so groß wie die Basis (Basis 3 => 3 rek. Aufrufe)
-				base_count(base, depth + 1, progress.concat(new Integer(i).toString() + " "));
+				base_count(base, depth + 1, progress.concat(new Integer(i).toString() + CustomNumberSystem.lim));
 			}
 		}
 	}
