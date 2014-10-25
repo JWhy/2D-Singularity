@@ -23,6 +23,4 @@ This is a very improbable use case, but it's still able to show the character of
 
 ## Some Maths ##
 
-The number of combination for a base 
-*n* is equal to the faculty of *n*. In the class 
-[CustomNumberSystem](src/de/jwiegratz/unique_numbers/CustomNumberSystem.java) you'll find the method **faculty(int n)**, which you can use to predetermine the size of the result set.
+The number of valid combinations for the described scenario of base *n* is equal to the faculty of *n*. In the class [CustomNumberSystem](src/de/jwiegratz/unique_numbers/CustomNumberSystem.java) you'll find the method **faculty(int n)**, which you can use to predetermine the size of the result set.
